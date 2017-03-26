@@ -1,6 +1,10 @@
 # Cleverbot
 A basic wrapper for the Cleverbot.io API with Asynchronous Support
 
+Cleverbot.io : [Link](https://cleverbot.io/)
+
+API Documentation: [Cleverbot.io API](https://docs.cleverbot.io)
+
 ## Installing
 
 To install the wrapper, just run the following command:
