@@ -9,7 +9,7 @@ To install the wrapper, just run the following command:
 python3 -m pip install -U https://github.com/Eternity71529/cleverbot/archive/master.zip
 ```
 ## Usage
-
+(Note: actual reply may vary, and will probably make fun of you. This *is* Cleverbot, after all.)
 ### Non-Async Client
  #### Parameters:
    - api_key = Your API Key
@@ -23,7 +23,7 @@ python3 -m pip install -U https://github.com/Eternity71529/cleverbot/archive/mas
 "I'm good, thanks. How are you?"
 ```
 ### Async-Client
- ##### Parameters:
+ #### Parameters:
    - api_key = Your API Key
    - user_id = Your API User ID
    - nick(Optional) = The nickname you give to the instance
