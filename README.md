@@ -39,12 +39,8 @@ python3 -m pip install -U https://github.com/Eternity71529/cleverbot/archive/mas
 ```
 
 ## Requirements
-
- #### Non-Async Client
-   - Python 2.7+
-   - `requests` library
- #### Async Client
-   - Python 3.4.2+
-   - `aiohttp` library
+ - Python 3.4.2+
+ - `requests` library
+ - `aiohttp` library
 
        
