@@ -8,9 +8,11 @@ class AsyncClient:
         for more control over the wrapper in an sync based program,
         see the :Client: class
     Usage:
+        >>> import asyncio
         >>> from cleverbot import *
-        >>> bot = AsyncClient(api_key = "API TOKEN/KEY HERE", user_id = "User ID Here", nick = "Optional Parameter to pass the Nickname")
-        >>> await bot.ask("Hi")
+        >>> loop = asyncio.get_event_loop()
+        >>> bot = AsyncClient(api_key = "API TOKEN/KEY HERE", user_id = "User ID Here", nick = "Optional Parameter to pass the Nickname", loop = loop)
+        >>> loop.run_until_complete(bot.ask("Hi"))
         "You said that so."
     Parameters to pass to the :Client: class
         -api_key = the Key for the API
