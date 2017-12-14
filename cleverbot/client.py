@@ -49,9 +49,9 @@ class Client:
             self.nick = self._nick
             return
         elif recv["status"] != "success":
-            raise CleverAPIError("An Error occured while creating a session. Error: {}\nPayload: {}".format(recv["status"], data))
+            raise CleverAPIError("An Error occured while creating a session. Error: {}\n".format(recv["status"]))
         elif post.status_code != 200:
-            raise CleverAPIError("An Error occured while creating a session. Error: Bad Request (Status Code: 400)\nPayload: {}".format(data))
+            raise CleverAPIError("An Error occured while creating a session. Error: {}(Status Code: {})".format(recv["status"],post.status_code))
         else:
             self.nick = recv["nick"]
     def ask(self, question):
