@@ -24,9 +24,7 @@ class AsyncClient:
         self.api_key = kwargs.pop("api_key", None)
         self.user_id = kwargs.pop("user_id", None)
         self._nick = kwargs.pop("nick", None)
-        self.loop = kwargs.pop("loop", None)
-        if self.loop is None:
-            self.loop = asyncio.get_event_loop()
+        self.loop = kwargs.pop("loop", asyncio.get_event_loop())
         self.check_credentials()
         self.nick = None
         self.session = aiohttp.ClientSession(loop = self.loop)
