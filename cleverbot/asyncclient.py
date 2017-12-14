@@ -42,10 +42,15 @@ class AsyncClient:
 
     @asyncio.coroutine
     def post(self, link, data):
-        with aiohttp.Timeout(5):
-            resp = yield from self.session.post(link, data = data)
-            foo = yield from resp.json()
-            return [foo, resp.status]
+        try:
+            with aiohttp.Timeout(5):
+                resp = yield from self.session.post(link, data = data)
+                foo = yield from resp.json()
+                return [foo, resp.status]
+        except asyncio.TimeoutError:
+            raise CleverAPIError("The API Timed out while POSTing this data")
+        else:
+            pass
 
     @asyncio.coroutine
     def create_session(self):
