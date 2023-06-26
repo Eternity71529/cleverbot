@@ -1,3 +1,5 @@
+**NOTE: THIS PROJECTED IS DEPRECATED AND SHOULD NOT BE USED**
+
 # Cleverbot
 A basic wrapper for the Cleverbot.io API with Asynchronous Support
 
